@@ -1,0 +1,7 @@
+@mixin focus-style($use: true) {
+  @if $use == false {
+    outline: none;
+  } @else {
+    outline: 3px solid lightsteelblue;
+  }
+}

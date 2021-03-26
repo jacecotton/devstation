@@ -1,0 +1,51 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--theme-background-color, rgba(245, 245, 245, 1));
+  color: var(--theme-text-color, rgba(0, 0, 0, .9));
+  font-family: sans-serif;
+}
+
+a {
+  color: var(--theme-link-color, #{color("lightblue")});
+
+  &:visited {
+    color: var(--theme-link-color, #{color("lightpurple")});
+  }
+}
+
+button {
+  appearance: none;
+  border: none;
+  font: inherit;
+}
+
+p,
+ul,
+ol,
+dl {
+  line-height: 1.8;
+  margin-bottom: 1em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus {
+  @include focus-style(true);
+}
